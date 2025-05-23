@@ -55,11 +55,11 @@ class Message extends AppClient
         return $this->post($url, $data);
     }
 
-    public function batchCard($open_ids, $template_id,?array $template_variable=[])
+    public function batchCard($union_ids, $template_id,?array $template_variable=[])
     {
         $url = '/message/v4/batch_send';
         $data = [
-            'open_ids' => $open_ids,
+            'union_ids' => $union_ids,
             'card' => [
                 'type'=>'template',
                 'data'=>[
